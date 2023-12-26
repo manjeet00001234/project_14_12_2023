@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>nav Bar</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+        box-sizing: border-box;
+      }
+      .contaner {
+        width: 100vw;
+        height: auto;
+        background-color: darkgray;
+      }
+
+      /* nav bar css start */
+      .nav_contaner {
+        width: 100vw;
+        height: auto;
+        background-color: rgb(81, 143, 205);
+        margin: auto;
+      }
+
+      .nav_contaner ul li a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 20px;
+      }
+
+      .nav_contaner ul li {
+        margin: auto;
+        padding: 10px;
+      }
+
+      .nav_contaner ul li:hover {
+        background-color: blue;
+        border-radius: 5px;
+        color: rgb(70, 226, 43);
+      }
+
+      .nav_contaner ul li a:hover {
+        /* font-size: 30px; */
+        color: rgb(70, 226, 43);
+      }
+
+      .nav_contaner ul {
+        display: flex;
+        justify-content: space-between;
+        /* height: 50px;           */
+      }
+
+      /* nav bar end */
+
+      /* ---------------------------- */
+
+      /* box contaner start */
+
+      .box_contaner {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        row-gap: 40px;
+        /* margin: 20px; */
+        width: 100%;
+        margin: 30px auto;
+        border: 2px solid teal;
+        /* margin-top: 30px; */
+      }
+
+      .img_cont_box {
+        margin: auto;
+        width: 300px;
+        height: 350px;
+        border: 1px solid black;
+        border-radius: 10px;
+        background-color: #fff;
+        text-align: center;
+        box-shadow: inset 0 -3em 3em rgba(0, 200, 0, 0.3), 0 0 0 2px white,
+          0.3em 0.3em 1em rgba(200, 0, 0, 0.6);
+        overflow: hidden;
+        position: relative;
+      }
+      .img_cont_box div img {
+        margin: auto;
+        align-items: center;
+        /* padding: 0px 0px 0px 0px; */
+        width: 400px;
+        height: 200px;
+        background: none;
+        transition: transform 0.9s ease-in-out;
+      }
+      .img_cont_box div img:hover {
+        margin: auto;
+        align-items: center;
+        /* padding: 0px 0px 0px 0px; */
+        width: 400px;
+        height: 200;
+        cursor: pointer;
+        transform: scale(1.1);
+      }
+
+      .img_cont_box div h2 {
+        /* border: 1px solid red; */
+        color: rgb(100, 138, 240);
+        font-size: 30px;
+        position: absolute;
+        margin: 40px 100px;
+      }
+
+      .img_cont_box div p {
+        /* border: 1px solid red; */
+        color: rgb(0, 162, 255);
+        margin: 20px 120px;
+        position: absolute;
+      }
+
+      .img_cont_box button {
+        /* border: 1px solid red; */
+        position: relative;
+        margin-top: 90px;
+        background-color: rgb(119, 119, 210);
+        color: #fff;
+        font-size: 20px;
+        border-radius: 10px;
+        width: 120px;
+        height: 40px;
+        cursor: pointer;
+        transition: transform 0.9s ease-in-out;
+      }
+
+      .img_cont_box button:hover {
+        transform: scale(1.1);
+        background-color: rgb(86, 86, 214);
+      }
+
+      /* jquery in css */
+
+      /* mobile phone jquery */
+
+      @media screen and (min-width: 200px) and (max-width: 420px) {
+        .box_contaner {
+          display: grid;
+          grid-template-columns: repeat(1, 1fr);
+          row-gap: 40px;
+          margin: 10px;
+        }
+
+        .img_cont_box {
+          margin: auto;
+          width: 300px;
+          height: 350px;
+          border: 1px solid black;
+          border-radius: 10px;
+          background-color: #fff;
+          text-align: center;
+          box-shadow: inset 0 -3em 3em rgba(0, 200, 0, 0.3), 0 0 0 2px white,
+            0.3em 0.3em 1em rgba(200, 0, 0, 0.6);
+          overflow: hidden;
+          position: relative;
+        }
+
+        .img_cont_box div img {
+          margin: auto;
+          align-items: center;
+          /* padding: 0px 0px 0px 0px; */
+          width: 300px;
+          height: 200px;
+          background: none;
+          transition: transform 0.9s ease-in-out;
+        }
+
+        .img_cont_box div img:hover {
+          margin: auto;
+          align-items: center;
+          /* padding: 0px 0px 0px 0px; */
+          width: 300px;
+          height: 200;
+          transform: scale(1.1);
+        }
+
+        .img_cont_box div h2 {
+          /* border: 1px solid red; */
+          color: rgb(100, 138, 240);
+          font-size: 20px;
+          position: absolute;
+          margin: 40px 80px;
+        }
+
+        .img_cont_box div p {
+          /* border: 1px solid red; */
+          color: rgb(0, 162, 255);
+          margin: 20px 80px;
+          position: absolute;
+        }
+      }
+
+      /* teblet jquery */
+      @media screen and (min-width: 421px) and (max-width: 768px) {
+        .box_contaner {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          row-gap: 40px;
+          margin: 10px;
+        }
+
+        .img_cont_box {
+          margin: auto;
+          width: 350px;
+          height: 350px;
+          border: 1px solid black;
+          border-radius: 10px;
+          background-color: #fff;
+          text-align: center;
+          box-shadow: inset 0 -3em 3em rgba(0, 200, 0, 0.3), 0 0 0 2px white,
+            0.3em 0.3em 1em rgba(200, 0, 0, 0.6);
+          overflow: hidden;
+          position: relative;
+        }
+
+        .img_cont_box div img {
+          margin: auto;
+          align-items: center;
+          /* padding: 0px 0px 0px 0px; */
+          width: 300px;
+          height: 200px;
+          background: none;
+          transition: transform 0.9s ease-in-out;
+        }
+
+        .img_cont_box div img:hover {
+          margin: auto;
+          align-items: center;
+          /* padding: 0px 0px 0px 0px; */
+          width: 300px;
+          height: 200;
+          transform: scale(1.1);
+        }
+
+        .img_cont_box div h2 {
+          /* border: 1px solid red; */
+          color: rgb(100, 138, 240);
+          font-size: 25px;
+          position: absolute;
+          margin: 40px 100px;
+        }
+
+        .img_cont_box div p {
+          /* border: 1px solid red; */
+          color: rgb(0, 162, 255);
+          margin: 20px 100px;
+          position: absolute;
+        }
+      }
+
+      /* leptop jquery */
+
+      @media screen and (min-width: 769px) and (max-width: 1280px) {
+        .box_contaner {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          row-gap: 40px;
+          margin: 10px;
+        }
+
+        .img_cont_box {
+          margin: auto;
+          width: 400px;
+          height: 350px;
+          border: 1px solid black;
+          border-radius: 10px;
+          background-color: #fff;
+          text-align: center;
+          box-shadow: inset 0 -3em 3em rgba(0, 200, 0, 0.3), 0 0 0 2px white,
+            0.3em 0.3em 1em rgba(200, 0, 0, 0.6);
+          overflow: hidden;
+          position: relative;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="contaner">
+      <!-- nav bar start -->
+      <div class="nav_contaner">
+        <ul>
+          <li><a href="http://">Home</a></li>
+          <li><a href="http://">About</a></li>
+          <li><a href="http://">Contact</a></li>
+          <li><a href="http://">Gellery</a></li>
+          <li><a href="http://">Cantent</a></li>
+        </ul>
+      </div>
+      <!-- nar bar end -->
+
+      <!-- ----------------------------------------------------- -->
+
+      <!-- img content box start -->
+
+      <div class="box_contaner">
+        <div class="img_cont_box">
+          <div><img src="./images/apple.png" alt="" /></div>
+          <div>
+            <p>Name:Apple Leptop</p>
+            <h2>price:1,15,000</h2>
+          </div>
+          <div><button>Buy Now</button></div>
+        </div>
+        <div class="img_cont_box">
+          <div><img src="./images/dell.png" alt="" /></div>
+          <div>
+            <p>Name:Dell Leptop</p>
+            <h2>price:1,10,000</h2>
+          </div>
+          <div><button>Buy Now</button></div>
+        </div>
+        <div class="img_cont_box">
+          <div><img src="./images/mi.png" alt="" /></div>
+          <div>
+            <p>Name:Mi Leptop</p>
+            <h2>price:1,05,000</h2>
+          </div>
+          <div><button>Buy Now</button></div>
+        </div>
+        <div class="img_cont_box">
+          <div><img src="./images/infnix.png" alt="" /></div>
+          <div>
+            <p>Name:Apple Leptop</p>
+            <h2>price:1,00,000</h2>
+          </div>
+          <div><button>Buy Now</button></div>
+        </div>
+        <div class="img_cont_box">
+          <div><img src="./images/apple_tab.png" alt="" /></div>
+          <div>
+            <p>Name:Apple Tablet</p>
+            <h2>price:90,000</h2>
+          </div>
+          <div><button>Buy Now</button></div>
+        </div>
+        <div class="img_cont_box">
+          <div><img src="./images/dell_tab.png" alt="" /></div>
+          <div>
+            <p>Name:Dell Tablet</p>
+            <h2>price:80,000</h2>
+          </div>
+          <div><button>Buy Now</button></div>
+        </div>
+        <div class="img_cont_box">
+          <div><img src="./images/infnix_tab.png" alt="" /></div>
+          <div>
+            <p>Name:Infnix Tablet</p>
+            <h2>price:70,000</h2>
+          </div>
+          <div><button>Buy Now</button></div>
+        </div>
+        <div class="img_cont_box">
+          <div><img src="./images/mi_tab.png" alt="" /></div>
+          <div>
+            <p>Name:Mi Tablet</p>
+            <h2>price:85,000</h2>
+          </div>
+          <div><button>Buy Now</button></div>
+        </div>
+        <div class="img_cont_box">
+          <div><img src="./images/mani_plant.png" alt="" /></div>
+          <div>
+            <p>Name:Mani Palant</p>
+            <h2>price:500</h2>
+          </div>
+          <div><button>Buy Now</button></div>
+        </div>
+        <div class="img_cont_box">
+          <div><img src="./images/z_plant.png" alt="" /></div>
+          <div>
+            <p>Name:Z Plant</p>
+            <h2>price:200</h2>
+          </div>
+          <div><button>Buy Now</button></div>
+        </div>
+        <div class="img_cont_box">
+          <div><img src="./images/carasula_plant.png" alt="" /></div>
+          <div>
+            <p>Name:Carusula plant</p>
+            <h2>price:100</h2>
+          </div>
+          <div><button>Buy Now</button></div>
+        </div>
+        <div class="img_cont_box">
+          <div><img src="./images/gulab_plant.png" alt="" /></div>
+          <div>
+            <p>Name:Gulab Plant</p>
+            <h2>price:150</h2>
+          </div>
+          <div><button>Buy Now</button></div>
+        </div>
+      </div>
+      <!-- img content box end -->
+    </div>
+  </body>
+</html>

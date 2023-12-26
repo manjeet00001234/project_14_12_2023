@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      nav {
+        border: 1px solid green;
+        width: 100%;
+        margin: auto;
+        display: flex;
+        background-color: beige;
+        justify-content: space-around;
+      }
+
+      .logo {
+        /* border: 1px solid teal; */
+        width: 4%;
+        padding: 5px;
+        object-fit: cover;
+      }
+
+      .logo img {
+        width: 100%;
+        transition: transform 0.7s ease-in-out;
+        /* border: 1px solid firebrick; */
+      }
+
+      .logo:hover img {
+        transform: scale(1.3);
+        cursor: pointer;
+      }
+
+      .nav_link {
+        /* border: 1px solid rgb(225, 165, 14); */
+        width: 80%;
+
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      .menu_item {
+        /* border: 1px solid rgb(128, 9, 0); */
+        width: 10%;
+        text-align: center;
+        display: none;
+      }
+
+
+
+      .parent_menu_bar_list {
+             padding: 10px;
+        position: relative;
+      }
+      .menu_bar_list {
+        position: absolute;
+        /* z-index: 1; */
+        width: 80px;
+    
+        background-color: antiquewhite;
+        display: none;
+      }
+
+      
+      .menu_bar_list a {
+        display: block;
+        padding: 8px;
+      
+      }
+
+      .menu_bar_list a:hover {
+        background-color: cyan;
+        border-radius: 8px;
+
+      }
+      .parent_menu_bar_list:hover .menu_bar_list {
+        display: block;
+      }
+
+      @media screen and (min-width: 200px) and (max-width: 420px) {
+        nav {
+          width: 100%;
+          margin: auto;
+          display: flex;
+          flex-direction: row-reverse;
+          justify-content: space-between;
+          align-items: center;
+        }
+        .nav_link {
+          display: none;
+        }
+        .menu_item {
+          display: block;
+        }
+
+        .logo {
+          /* border: 1px solid teal; */
+          width: 12%;
+          padding: 5px;
+          object-fit: cover;
+        }
+
+        .logo img {
+          width: 100%;
+          transition: transform 0.7s ease-in-out;
+          /* border: 1px solid firebrick; */
+        }
+
+        .logo:hover img {
+          transform: scale(1.3);
+          cursor: pointer;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav>
+      <div class="logo">
+        <img src="./apple.png" alt="" />
+      </div>
+      <div class="nav_link">
+        <a href="">Home</a>
+
+<!---- on hover show sub list---- -->
+        <div class="parent_menu_bar_list">
+          <a href="">About</a>
+          <div class="menu_bar_list">
+            <a href="">list1</a>
+            <a href="">list2</a>
+            <a href="">list3</a>
+          </div>
+        </div>
+
+        <a href="">Gallery</a>
+        <a href="">Section</a>
+        <a href="">Contact</a>
+      </div>
+      <div class="menu_item">
+        <span>&#9776;</span>
+      </div>
+    </nav>
+  </body>
+</html>
